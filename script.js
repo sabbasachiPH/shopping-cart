@@ -42,11 +42,15 @@ function taxCalculation(){
 
 const removeItem1 = document.getElementById("remove-item1");
     removeItem1.addEventListener("click", function(){
+        document.getElementById("unitPrice").innerText = 0;
+        taxCalculation();
         hideBlock("cartItem1");
 
     });
 const removeItem2 = document.getElementById("remove-item2");
     removeItem2.addEventListener("click", function(){
+        document.getElementById("unitPrice1").innerText = 0;
+        taxCalculation();
         hideBlock("cartItem2");
 
     });
