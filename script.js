@@ -3,24 +3,28 @@ const addItem = document.getElementById("addItem");
     addItem.addEventListener('click', function(){
        const itemOneTotal = singleItemAdd("quantity",100);
        document.getElementById("unitPrice").innerText = itemOneTotal;
+       taxCalculation();
      });  
 const addItem1 = document.getElementById("addItem1");
       addItem1.addEventListener('click',function(){
           const itemTwoTotal = singleItemAdd("quantity1",100);
-          document.getElementById("unitPrice1").innerText = itemTwoTotal;         
+          document.getElementById("unitPrice1").innerText = itemTwoTotal; 
+          taxCalculation();
       });       
 
 const deleteItem = document.getElementById("deleteItem");
     deleteItem.addEventListener('click', function(){
        const itemOneTotalAfterdelete = singleItemDelete("quantity",100);
-        document.getElementById("unitPrice").innerText = itemOneTotalAfterdelete;       
+        document.getElementById("unitPrice").innerText = itemOneTotalAfterdelete;  
+        taxCalculation();
      });  
 
 
 const deleteItem1 = document.getElementById("deleteItem1");
      deleteItem1.addEventListener('click', function(){
         const itemTwoTotalAfterdelete = singleItemDelete("quantity1",100);
-         document.getElementById("unitPrice1").innerText = itemTwoTotalAfterdelete;        
+        document.getElementById("unitPrice1").innerText = itemTwoTotalAfterdelete;
+        taxCalculation();
       }); 
 
 taxCalculation();
